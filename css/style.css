@@ -1,0 +1,235 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #f8f9fa;
+  margin-top: 60px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid #fff;
+}
+
+/* Skill Section */
+.skills-section {
+  padding: 3rem 1rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.skills-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skill-bubble {
+  background: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  flex: 1 1 calc(50% - 2rem);
+  max-width: calc(50% - 2rem);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.skill-bubble h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.skill-bubble ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+.skill-bubble li {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #eef;
+}
+
+.skill-bubble:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .skill-bubble {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Games Section */
+.games-section {
+  padding: 3rem 1rem;
+  background: #f8f9fa;
+}
+
+.games-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.games-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.games-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.games-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.games-card p {
+  color: #555;
+}
+
+.games-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-section .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-section button.btn {
+  padding: 0.75rem;
+  background: #007bff;
+  color: #fff;
+}
+
+/* Scroll Margin for Fixed Navbar */
+section {
+  scroll-margin-top: 70px; /* Sesuaikan dengan tinggi navbar */
+}

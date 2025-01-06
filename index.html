@@ -1,11 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css"
-</head>
-<body>
-    <h3></h3>
-    
-</body>
+  <head>
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <a href="#home" class="navbar-brand">YOGA</a>
+        <button class="navbar-toggler" id="navbar-toggler">☰</button>
+        <ul class="navbar-links" id="navbar-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home" class="hero-section">
+      <img src="img/hero.png.png" alt="Profile Picture" class="profile-pic" />
+      <h1>Yoga</h1>
+      <p>Student | Gamer</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>
+            Saya adalah mahasiswa Teknik Informatika di Universitas Bandung, Fakultas Teknik. Lahir di Bogor, Jawa Barat, pada 21 Juni 2005, saya memiliki minat besar dalam teknologi dan pengembangan diri. Saat ini, saya tengah mengasah
+            keterampilan di bidang pemrograman, pengembangan perangkat lunak, dan teknologi informasi untuk membangun masa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skill Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+          <!-- Kolom Kiri: HTML -->
+          <div class="skill-bubble">
+            <h3>HTML</h3>
+            <ul>
+              <li>Semantic Tags (section, article, header)</li>
+              <li>Headings (h1 to h6)</li>
+              <li>Lists (ul, ol, li)</li>
+              <li>Forms (input, textarea, button)</li>
+              <li>Links (a href, target)</li>
+              <li>Tables (table, tr, td)</li>
+              <li>Images (img, alt attributes)</li>
+              <li>Class & ID Attributes</li>
+            </ul>
+          </div>
+          <!-- Kolom Kanan: CSS -->
+          <div class="skill-bubble">
+            <h3>CSS</h3>
+            <ul>
+              <li>Selectors (#id, .class, *)</li>
+              <li>Box Model (margin, padding, border)</li>
+              <li>Flexbox (display: flex, justify-content)</li>
+              <li>Grid Layout</li>
+              <li>Responsive Design</li>
+              <li>Transitions & Animations</li>
+              <li>Media Queries</li>
+              <li>Colors and Backgrounds</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+      <div class="container">
+        <h2>My Games</h2>
+        <div class="row">
+          <div class="games-card">
+            <img src="img/PUBG.jpg" alt="PUBG" />
+            <h3>PUBG</h3>
+            <p>A battle royale game loved by millions worldwide.</p>
+          </div>
+          <div class="games-card">
+            <img src="img/MobileLegend.jpg" alt="Mobile Legend" />
+            <h3>Mobile Legend</h3>
+            <p>A popular mobile MOBA game with fast-paced action.</p>
+          </div>
+          <div class="games-card">
+            <img src="img/ROK.jpg" alt="Rise of Kingdoms" />
+            <h3>ROK</h3>
+            <p>A strategy game with epic battles and city-building features.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Designed by Yoga 2024</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
