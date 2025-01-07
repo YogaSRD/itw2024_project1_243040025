@@ -9,7 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #f1eded;
 }
 
 .container {
@@ -20,17 +20,17 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #007bff;
+  background-color: #080808;
   padding: 1rem;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 2px 5px rgba(134, 9, 9, 0.2); */
   display: flex;
-  align-items: center; /* Sejajarkan elemen secara vertikal */
-  justify-content: space-between; /* Pisahkan brand di kiri dan menu di kanan */
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-container {
@@ -41,51 +41,50 @@ body {
 }
 
 .navbar-brand {
-  color: #fff;
+  color: #eceaea;
   font-size: 1.5rem;
   text-decoration: none;
   font-weight: bold;
 }
 
 .navbar-toggler {
-  display: none; /* Default disembunyikan di layar besar */
+  display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: #f6ecec;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 .navbar-links {
   list-style: none;
-  display: flex; /* Tampilkan menu dalam bentuk horizontal di layar besar */
-  align-items: center; /* Sejajarkan item secara vertikal */
-  gap: 1rem; /* Jarak antar link */
-  margin: 0; /* Hapus margin bawaan */
-  padding: 0; /* Hapus padding bawaan */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-links a {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  padding: 0.5rem 1rem; /* Beri padding untuk memperbaiki tampilan */
+  padding: 0.5rem 1rem;
 }
 
-/* Hamburger Menu (Layar Kecil) */
 @media (max-width: 768px) {
   .navbar-toggler {
-    display: block; /* Tampilkan tombol hamburger */
+    display: block;
   }
 
   .navbar-links {
-    display: none; /* Sembunyikan menu default */
+    display: none;
   }
 
   .navbar-links.show {
-    display: flex; /* Tampilkan menu saat kelas "show" ditambahkan */
-    flex-direction: column; /* Menu vertikal */
-    background-color: #007bff;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
     position: absolute;
     top: 100%;
     right: 0;
@@ -98,7 +97,7 @@ body {
 .hero-section {
   text-align: center;
   padding: 4rem 1rem;
-  background: #f8f9fa;
+  background: black;
   margin-top: 60px;
 }
 
@@ -107,20 +106,25 @@ body {
   height: 150px;
   border-radius: 50%;
   margin-bottom: 1rem;
-  border: 5px solid #fff;
+  border: 5px solid #111010;
+}
+
+/* About section */
+.about-section {
+  background-color: #080808;
 }
 
 /* Skill Section */
 .skills-section {
   padding: 3rem 1rem;
-  background: #f8f9fa;
+  background: #0a0c0e;
   text-align: center;
 }
 
 .skills-section h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: #333;
+  color: #e9dcdc;
 }
 
 .skills-container {
@@ -131,13 +135,11 @@ body {
 }
 
 .skill-bubble {
-  background: #007bff;
-  color: #fff;
+  background: #052452;
   border-radius: 10px;
   padding: 2rem;
   flex: 1 1 calc(50% - 2rem);
   max-width: calc(50% - 2rem);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
 }
@@ -145,7 +147,7 @@ body {
 .skill-bubble h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #eee7e7;
 }
 
 .skill-bubble ul {
@@ -156,53 +158,24 @@ body {
 .skill-bubble li {
   font-size: 1rem;
   line-height: 1.5;
-  color: #eef;
+  color: white;
 }
 
 .skill-bubble:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsivitas */
 @media (max-width: 768px) {
-  .navbar-toggler {
-    display: block; /* Tampilkan tombol hamburger */
-  }
-
-  .navbar-links {
-    display: none; /* Sembunyikan menu default */
-  }
-
-  .navbar-links.show {
-    display: flex; /* Tampilkan menu saat kelas "show" ditambahkan */
-    flex-direction: column; /* Menu vertikal */
-    background-color: #007bff;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    padding: 1rem 0;
-  }
-
   .skill-bubble {
     flex: 1 1 100%;
     max-width: 100%;
   }
 }
 
-@media (min-width: 769px) {
-  .navbar-links {
-    display: flex; /* Tampilkan menu di layar besar */
-    flex-direction: row;
-    gap: 1rem;
-  }
-}
-
 /* Games Section */
 .games-section {
   padding: 3rem 1rem;
-  background: #f8f9fa;
+  background: #0c0d0e;
 }
 
 .games-section h2 {
@@ -218,7 +191,7 @@ body {
 }
 
 .games-card {
-  background: #fff;
+  background: #230f72;
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
@@ -226,7 +199,6 @@ body {
   max-width: calc(33.333% - 1rem);
   text-align: center;
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -242,16 +214,34 @@ body {
 }
 
 .games-card p {
-  color: #555;
+  color: #f8f0f0;
 }
 
 .games-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+  .games-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .games-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 /* Contact Section */
+.contact-section {
+  background-color: #080808;
+}
+
 .contact-section form {
+  background-color: #080808;
   max-width: 600px;
   margin: 0 auto;
   display: flex;
@@ -271,18 +261,17 @@ body {
 .contact-section .form-group input,
 .contact-section .form-group textarea {
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid #f9eeee;
   border-radius: 5px;
   font-size: 1rem;
 }
 
 .contact-section button.btn {
   padding: 0.75rem;
-  background: #007bff;
-  color: #fff;
+  background: black;
+  color: #ddd;
 }
 
-/* Scroll Margin for Fixed Navbar */
 section {
   scroll-margin-top: 70px;
 }
