@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Body */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -21,7 +21,7 @@ body {
 /* Navbar */
 .navbar {
   background-color: #007bff;
-  padding: 1rem 0;
+  padding: 1rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -29,8 +29,8 @@ body {
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Sejajarkan elemen secara vertikal */
+  justify-content: space-between; /* Pisahkan brand di kiri dan menu di kanan */
 }
 
 .navbar-container {
@@ -48,7 +48,7 @@ body {
 }
 
 .navbar-toggler {
-  display: none;
+  display: none; /* Default disembunyikan di layar besar */
   background: none;
   border: none;
   color: #fff;
@@ -58,14 +58,40 @@ body {
 
 .navbar-links {
   list-style: none;
-  display: flex;
-  gap: 1rem;
+  display: flex; /* Tampilkan menu dalam bentuk horizontal di layar besar */
+  align-items: center; /* Sejajarkan item secara vertikal */
+  gap: 1rem; /* Jarak antar link */
+  margin: 0; /* Hapus margin bawaan */
+  padding: 0; /* Hapus padding bawaan */
 }
 
 .navbar-links a {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
+  padding: 0.5rem 1rem; /* Beri padding untuk memperbaiki tampilan */
+}
+
+/* Hamburger Menu (Layar Kecil) */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block; /* Tampilkan tombol hamburger */
+  }
+
+  .navbar-links {
+    display: none; /* Sembunyikan menu default */
+  }
+
+  .navbar-links.show {
+    display: flex; /* Tampilkan menu saat kelas "show" ditambahkan */
+    flex-direction: column; /* Menu vertikal */
+    background-color: #007bff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
 }
 
 /* Hero Section */
@@ -140,9 +166,36 @@ body {
 
 /* Responsivitas */
 @media (max-width: 768px) {
+  .navbar-toggler {
+    display: block; /* Tampilkan tombol hamburger */
+  }
+
+  .navbar-links {
+    display: none; /* Sembunyikan menu default */
+  }
+
+  .navbar-links.show {
+    display: flex; /* Tampilkan menu saat kelas "show" ditambahkan */
+    flex-direction: column; /* Menu vertikal */
+    background-color: #007bff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
   .skill-bubble {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-links {
+    display: flex; /* Tampilkan menu di layar besar */
+    flex-direction: row;
+    gap: 1rem;
   }
 }
 
@@ -231,5 +284,5 @@ body {
 
 /* Scroll Margin for Fixed Navbar */
 section {
-  scroll-margin-top: 70px; /* Sesuaikan dengan tinggi navbar */
+  scroll-margin-top: 70px;
 }
